@@ -32,14 +32,18 @@ function Post({
           onClick={
             like
               ? () => {
-                  addLike(!like);
-                  likeDislikePost(data.slug, logInData.token, "DELETE");
-                  changeLikeCount(likeCount - 1);
+                  if (logInData.token) {
+                    addLike(!like);
+                    likeDislikePost(data.slug, logInData.token, "DELETE");
+                    changeLikeCount(likeCount - 1);
+                  }
                 }
               : () => {
-                  addLike(!like);
-                  likeDislikePost(data.slug, logInData.token, "POST");
-                  changeLikeCount(likeCount + 1);
+                  if (logInData.token) {
+                    addLike(!like);
+                    likeDislikePost(data.slug, logInData.token, "POST");
+                    changeLikeCount(likeCount + 1);
+                  }
                 }
           }
         >
