@@ -1,0 +1,16 @@
+.PostsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.PostItem {
+  overflow: hidden;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  padding: 15px;
+  width: 941px;
+  min-height: 140px;
+  box-sizing: border-box;
+}

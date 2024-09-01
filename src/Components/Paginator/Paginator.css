@@ -1,0 +1,15 @@
+.ant-pagination {
+  margin-top: 20px;
+}
+
+.ant-pagination-item {
+  background-color: inherit !important;
+}
+
+.ant-pagination-item-active {
+  background-color: #1890ff !important;
+}
+
+.ant-pagination-item-active a {
+  color: white !important;
+}

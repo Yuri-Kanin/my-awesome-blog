@@ -1,0 +1,75 @@
+.Header {
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: white;
+  align-items: center;
+  padding: 0 22px;
+}
+
+.Header_Title {
+  margin-right: auto;
+  font: inherit;
+}
+
+.Header_Button {
+  border: none;
+  background-color: inherit;
+  font: inherit;
+}
+
+.Header_Button_SignUp {
+  border: none;
+  background-color: inherit;
+  font: inherit;
+  box-sizing: border-box;
+  border: 1px solid rgb(82, 196, 26);
+  border-radius: 5px;
+  margin-left: 19px;
+}
+
+.Header_Button_LogOut {
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  background-color: inherit;
+  font: inherit;
+  padding: 9px;
+}
+
+.Header_Button_Create {
+  box-sizing: border-box;
+  border: 1px solid rgb(82, 196, 26);
+  border-radius: 5px;
+  background-color: inherit;
+  color: rgb(82, 196, 26);
+  font-family: "Inter";
+  font-size: 14px;
+  padding: 6px;
+}
+
+.Photo {
+  background-color: inherit;
+  border: none;
+  font: inherit;
+}
+
+.Photo > a {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.Image {
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  padding: 5px;
+}

@@ -1,0 +1,15 @@
+.Tag {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  line-height: 15px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  padding: 1px 4px;
+  margin: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  display: inline-block;
+  max-width: 100px;
+}
