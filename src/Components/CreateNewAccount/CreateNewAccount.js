@@ -15,7 +15,7 @@ const schema = yup
   .shape({
     username: yup
       .string()
-      .matches(/^[a-z][a-z0-9]*$/)
+      .matches(/^[a-z][a-z0-9]*$/, "You can only use English letter")
       .min(3)
       .max(20)
       .required(),
@@ -82,7 +82,7 @@ function CreateNewAccount({ logInError, postAuthData }) {
             Email Address
             <input
               className={errors.email ? classes.InputError : classes.Input}
-              type="text"
+              type="email"
               name="email"
               placeholder="Email address"
               {...register("email")}
@@ -94,7 +94,7 @@ function CreateNewAccount({ logInError, postAuthData }) {
             Password
             <input
               className={errors.password ? classes.InputError : classes.Input}
-              type="text"
+              type="password"
               name="password"
               placeholder="Password"
               {...register("password")}
@@ -107,7 +107,7 @@ function CreateNewAccount({ logInError, postAuthData }) {
               className={
                 errors.repeatPassword ? classes.InputError : classes.Input
               }
-              type="text"
+              type="password"
               name="repeatPassword"
               placeholder="Password"
               {...register("repeatPassword")}

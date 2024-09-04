@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import * as actions from "../../Actions";
 import classes from "../Header/Header.module.scss";
 
 function UserInfo({ logInData, forceUpdateLogInData }) {
+  const redirect = useNavigate();
   return (
     <>
       <button className={classes.Header_Button_Create} type="button">
@@ -13,11 +14,13 @@ function UserInfo({ logInData, forceUpdateLogInData }) {
           <span>Create Article</span>
         </Link>
       </button>
-      <button type="button" className={classes.Photo}>
-        <Link to="/profile">
-          <span className={classes.Username}>{logInData.username}</span>
-          <img className={classes.Image} src={logInData.image} alt="ava" />
-        </Link>
+      <button
+        type="button"
+        className={classes.Photo}
+        onClick={() => redirect("/profile")}
+      >
+        <span className={classes.Username}>{logInData.username}</span>
+        <img className={classes.Image} src={logInData.image} alt="ava" />
       </button>
       <button
         className={classes.Header_Button_LogOut}

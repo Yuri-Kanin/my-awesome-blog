@@ -17,17 +17,17 @@ const schema = yup
   .shape({
     title: yup
       .string()
-      .matches(/^[a-zA-Zа-яА-ЯёЁ0-9\s]+$/)
+      .matches(/^[a-zA-Zа-яА-ЯёЁ0-9\s]+$/, "You can only use English letter")
       .min(1)
       .max(100)
-      .required(),
+      .required("This field is required"),
     description: yup
       .string()
-      .matches(/^[a-zA-Zа-яА-ЯёЁ0-9\s.!?]+$/)
+      .matches(/^[a-zA-Zа-яА-ЯёЁ0-9\s.!?]+$/, "You can only use letters")
       .min(1)
       .max(109)
-      .required(),
-    body: yup.string().max(4000).required(),
+      .required("This field is required"),
+    body: yup.string().max(4000).required("This field is required"),
   })
   .required();
 

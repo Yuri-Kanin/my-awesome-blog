@@ -56,7 +56,7 @@ function LogInModalWindow({ logInError, logInData, postAuthData }) {
             Email Address
             <input
               className={errors.email ? classes.InputError : classes.Input}
-              type="text"
+              type="email"
               name="email"
               placeholder="Email address"
               {...register("email")}
@@ -72,7 +72,7 @@ function LogInModalWindow({ logInError, logInData, postAuthData }) {
             Password
             <input
               className={errors.password ? classes.InputError : classes.Input}
-              type="text"
+              type="password"
               name="password"
               placeholder="Password"
               {...register("password")}

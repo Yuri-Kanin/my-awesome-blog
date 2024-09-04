@@ -33,9 +33,9 @@ const getPostsThinkCreator = (numberPage, token) => dispatch => {
   });
 };
 
-const setFullPostThunkCreator = slug => dispatch => {
+const setFullPostThunkCreator = (slug, token) => dispatch => {
   dispatch(Fetching(true));
-  BlogServiceDB.getPostWithSlug(slug).then(res => {
+  BlogServiceDB.getPostWithSlug(slug, token).then(res => {
     const { article } = res;
     dispatch(setFullPost(article));
   });

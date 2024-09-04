@@ -15,8 +15,12 @@ export default class BlogService {
       const { articles, articlesCount } = resolve;
       return { articles, articlesCount };
     };
-    this.getPostWithSlug = async slug => {
-      const promise = await fetch(`${BaseUrl}articles/${slug}`);
+    this.getPostWithSlug = async (slug, token) => {
+      const promise = await fetch(`${BaseUrl}articles/${slug}`, {
+        headers: {
+          Authorization: `Token ${token}`,
+        },
+      });
       const resolve = await promise.json();
       const { article } = resolve;
       return { article };

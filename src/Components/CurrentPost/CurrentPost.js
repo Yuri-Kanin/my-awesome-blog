@@ -17,7 +17,7 @@ function CurrentPost({
   likeDislikePost,
 }) {
   useEffect(() => {
-    setFullPostThunkCreator(articlesSlug);
+    setFullPostThunkCreator(articlesSlug, logInData.token);
   }, [articlesSlug, setFullPostThunkCreator]);
 
   return (

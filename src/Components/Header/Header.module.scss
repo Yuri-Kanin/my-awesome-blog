@@ -41,6 +41,7 @@
   background-color: inherit;
   font: inherit;
   padding: 9px;
+  cursor: pointer;
 }
 
 .Header_Button_Create {
@@ -58,12 +59,10 @@
   background-color: inherit;
   border: none;
   font: inherit;
-}
-
-.Photo > a {
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding: 0 15px;
+  cursor: pointer;
 }
 
 .Image {

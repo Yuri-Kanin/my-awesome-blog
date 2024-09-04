@@ -43,6 +43,8 @@ function Post({
                     addLike(!like);
                     likeDislikePost(data.slug, logInData.token, "POST");
                     changeLikeCount(likeCount + 1);
+                  } else {
+                    redirect("/sign-in");
                   }
                 }
           }
@@ -91,8 +93,12 @@ function Post({
               okText="Yes"
             />
           ) : null}
-          <button className={classes.Edit} type="button">
-            <Link to={`/articles/${data.slug}/edit`}>Edit</Link>
+          <button
+            className={classes.Edit}
+            type="button"
+            onClick={() => redirect(`/articles/${data.slug}/edit`)}
+          >
+            Edit
           </button>
         </div>
       ) : null}

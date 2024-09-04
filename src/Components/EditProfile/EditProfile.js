@@ -15,7 +15,7 @@ const schema = yup
   .shape({
     username: yup
       .string()
-      .matches(/^[a-z][a-z0-9]*$/)
+      .matches(/^[a-z][a-z0-9]*$/, "You can only use English letter")
       .min(3)
       .max(20)
       .required(),
@@ -74,6 +74,7 @@ function EditProfile({ logInError, logInData, putEditProfile }) {
               type="text"
               name="username"
               placeholder="Username"
+              defaultValue={logInData.username}
               {...register("username")}
             />
             <p className={classes.Error}>{errors.username?.message}</p>
@@ -83,9 +84,10 @@ function EditProfile({ logInError, logInData, putEditProfile }) {
             Email Address
             <input
               className={errors.email ? classes.InputError : classes.Input}
-              type="text"
+              type="email"
               name="email"
               placeholder="Email address"
+              defaultValue={logInData.email}
               {...register("email")}
             />
             <p className={classes.Error}>{errors.email?.message}</p>
@@ -99,7 +101,7 @@ function EditProfile({ logInError, logInData, putEditProfile }) {
             New password
             <input
               className={errors.password ? classes.InputError : classes.Input}
-              type="text"
+              type="password"
               name="password"
               placeholder="Password"
               {...register("password")}
@@ -113,6 +115,7 @@ function EditProfile({ logInError, logInData, putEditProfile }) {
               type="text"
               name="avatar"
               placeholder="Avatar image"
+              defaultValue={logInData.image ? logInData.image : ""}
               {...register("avatar")}
             />
             <p className={classes.Error}>{errors.avatar?.message}</p>
