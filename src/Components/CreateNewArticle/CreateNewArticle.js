@@ -47,7 +47,8 @@ function CreateNewArticle({
   }, []);
 
   useEffect(() => {
-    if (prevTokenRef.current !== logInError || !logInData.token) redirect("/");
+    if (prevTokenRef.current !== logInError || !logInData.token)
+      redirect("/sign-in");
   }, [logInError, logInData]);
 
   const [TagArray, AddTag] = useState([]);
